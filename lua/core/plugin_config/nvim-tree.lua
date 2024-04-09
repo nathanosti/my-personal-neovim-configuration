@@ -7,8 +7,9 @@ require("nvim-tree").setup({
     group_empty = true,
   },
   filters = {
-    dotfiles = false,
-  },
+    dotfiles = true,
+    custom = { '^.git$' }
+  }
 })
 
 vim.keymap.set('n', '<c-n>', ':NvimTreeFindFileToggle<CR>')

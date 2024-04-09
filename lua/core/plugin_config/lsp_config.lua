@@ -1,7 +1,7 @@
 require("mason").setup()
 
 require("mason-lspconfig").setup({
-  ensure_installed = { "tsserver", "lua_ls", "pyright", "html", "jsonls", "rust_analyzer" }
+  ensure_installed = { "tsserver", "lua_ls", "pyright", "html", "jsonls", "rust_analyzer", "gopls" }
 })
 
 vim.keymap.set('n', '<space>e', vim.diagnostic.open_float)
@@ -47,3 +47,4 @@ lspconfig.lua_ls.setup({})
 lspconfig.pyright.setup({})
 lspconfig.html.setup({})
 lspconfig.jsonls.setup({})
+lspconfig.gopls.setup({})
