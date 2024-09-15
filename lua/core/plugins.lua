@@ -13,15 +13,16 @@ local packer_bootstrap = ensure_packer()
 
 return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
-  use 'rebelot/kanagawa.nvim'
+  use 'navarasu/onedark.nvim'
   use 'shaunsingh/nord.nvim'
   use 'nvim-tree/nvim-tree.lua'
   use 'nvim-tree/nvim-web-devicons'
   use 'nvim-lualine/lualine.nvim'
   use 'nvim-treesitter/nvim-treesitter'
+  use 'nvim-lua/plenary.nvim'
   use { 'nvim-telescope/telescope.nvim',
     tag = '0.1.6',
-    requires = { { 'nvim-lua/plenary.nvim', 'BurntSushi/ripgrep' } }
+    requires = { { 'BurntSushi/ripgrep' } }
   }
   use { 'hrsh7th/nvim-cmp',
     requires = { { 'hrsh7th/cmp-nvim-lsp' } }
@@ -36,7 +37,6 @@ return require('packer').startup(function(use)
     'williamboman/mason-lspconfig.nvim',
     'neovim/nvim-lspconfig',
   }
-  use 'lewis6991/gitsigns.nvim'
   use 'romgrk/barbar.nvim'
   use 'akinsho/toggleterm.nvim'
   use { "iamcco/markdown-preview.nvim",
@@ -48,6 +48,9 @@ return require('packer').startup(function(use)
     end,
     ft = { "markdown" },
   }
+  use({
+    "kdheepak/lazygit.nvim",
+  })
 
 
   if packer_bootstrap then
