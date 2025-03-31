@@ -6,7 +6,7 @@ local capabilities = require("cmp_nvim_lsp").default_capabilities()
 local lspconfig = require('lspconfig')
 
 -- Enable some language servers with the additional completion capabilities offered by nvim-cmp
-local servers = { 'clangd', 'rust_analyzer', 'pyright', 'ts_ls', 'jdtls' }
+local servers = { "ts_ls", "lua_ls", "pyright", "html", "jsonls", "rust_analyzer", "gopls", "jdtls" }
 
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {

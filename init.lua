@@ -2,7 +2,6 @@ require("core.keymaps")
 require("core.plugins")
 require("core.plugin_config")
 
-
 vim.o.clipboard = "unnamedplus"
 
 if vim.fn.has('wsl') == 1 then
